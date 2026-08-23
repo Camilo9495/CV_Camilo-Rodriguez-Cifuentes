@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camilo Andrés Rodríguez Cifuentes - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            height: auto;
+            margin: 0 auto;
+            background-color: white;
+            padding: 0.5in 0.42in;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            line-height: 1.3;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 0.15in;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.1in;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+        
+        .header-contact {
+            font-size: 11px;
+            margin-bottom: 2px;
+        }
+        
+        .header-contact a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .header-contact a:hover {
+            text-decoration: underline;
+        }
+        
+        .bullet-separator {
+            margin: 0 3px;
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 0.15in;
+        }
+        
+        h2 {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 8px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 2px;
+        }
+        
+        /* Professional Summary */
+        .summary-text {
+            font-size: 11px;
+            text-align: justify;
+            line-height: 1.35;
+        }
+        
+        /* Work Experience */
+        .job-title {
+            font-weight: bold;
+            font-size: 11px;
+        }
+        
+        .job-company {
+            font-weight: bold;
+            font-size: 11px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2px;
+        }
+        
+        .job-company-name {
+            flex: 1;
+        }
+        
+        .job-location {
+            text-align: right;
+            flex-shrink: 0;
+        }
+        
+        .job-dates {
+            font-size: 11px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            color: #555;
+        }
+        
+        .job-dates-range {
+            flex: 1;
+        }
+        
+        .job-description {
+            font-size: 10px;
+            margin-bottom: 6px;
+        }
+        
+        .job-description ul {
+            list-style: disc;
+            margin-left: 18px;
+            margin-top: 2px;
+        }
+        
+        .job-description li {
+            margin-bottom: 2px;
+            line-height: 1.3;
+        }
+        
+        /* Education */
+        .education-entry {
+            font-size: 11px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            gap: 10px;
+        }
+        
+        .education-left {
+            flex: 1;
+        }
+        
+        .education-program {
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        
+        .education-school {
+            font-size: 10px;
+            color: #555;
+        }
+        
+        .education-right {
+            text-align: right;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+        
+        .education-dates {
+            font-weight: normal;
+            margin-bottom: 2px;
+        }
+        
+        .education-grade {
+            font-size: 10px;
+            color: #555;
+        }
+        
+        /* Projects */
+        .project-entry {
+            margin-bottom: 6px;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            font-size: 11px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .project-category {
+            font-style: italic;
+            font-size: 10px;
+            color: #555;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2px;
+        }
+        
+        .project-description {
+            font-size: 10px;
+            margin-bottom: 4px;
+        }
+        
+        .project-description ul {
+            list-style: disc;
+            margin-left: 18px;
+            margin-top: 2px;
+        }
+        
+        .project-description li {
+            margin-bottom: 2px;
+            line-height: 1.3;
+        }
+        
+        /* Skills */
+        .skills-line {
+            font-size: 11px;
+            margin-bottom: 3px;
+            line-height: 1.3;
+        }
+        
+        .skills-category {
+            font-weight: bold;
+            display: inline;
+            margin-right: 5px;
+        }
+        
+        .skills-content {
+            display: inline;
+        }
+        
+        /* Certifications */
+        .certification-list {
+            font-size: 11px;
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .certification-list li {
+            margin-bottom: 3px;
+            line-height: 1.3;
+        }
+        
+        .certification-list a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .certification-list a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Publications */
+        .publication-entry {
+            font-size: 11px;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+        
+        .publication-label {
+            font-weight: bold;
+            display: inline;
+            margin-right: 5px;
+        }
+        
+        .publication-title {
+            font-style: italic;
+        }
+        
+        .publication-link {
+            color: #0066cc;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+        
+        .publication-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Languages */
+        .language-line {
+            font-size: 11px;
+            margin-bottom: 2px;
+            line-height: 1.3;
+        }
+        
+        .language-name {
+            font-weight: bold;
+            display: inline;
+            margin-right: 5px;
+        }
+        
+        .language-level {
+            display: inline;
+        }
+        
+        .language-cert {
+            color: #0066cc;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+        
+        .language-cert:hover {
+            text-decoration: underline;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 0.5in 0.42in;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 900px) {
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+            
+            .education-entry,
+            .project-title,
+            .job-company,
+            .job-dates {
+                flex-direction: column;
+            }
+            
+            .education-right,
+            .job-location {
+                text-align: left;
+                margin-top: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Camilo Andrés Rodríguez Cifuentes</h1>
+            <div class="header-contact">
+                <span>camilo.rodriguez.c@usach.cl</span>
+                <span class="bullet-separator">•</span>
+                <span><strong>(+56) 9 2936 8817</strong></span>
+                <span class="bullet-separator">•</span>
+                <a href="https://www.linkedin.com/in/camilo-rodriguez-469958207/" target="_blank">linkedin.com/in/camilo-rodriguez-469958207</a>
+                <span class="bullet-separator">•</span>
+                <a href="https://github.com/Camilo9495" target="_blank">github.com/Camilo9495</a>
+            </div>
+        </div>
+        
+        <!-- Professional Summary -->
+        <section>
+            <h2>Professional Summary</h2>
+            <p class="summary-text">
+                Mechatronic and Mathematics Engineer with a double Master's degree and 2 years of experience specialized in R&D and comprehensive project development. Led the design of a patented robotic system, successfully managing its transition to a functional prototype aimed at industrial scaling. Converts complex mathematical models (PDEs, ODEs) into commercially viable technological solutions under strict cost control. Seeks a leadership position to drive corporate innovation.
+            </p>
+        </section>
+        
+        <!-- Work Experience -->
+        <section>
+            <h2>Work Experience</h2>
+            
+            <div class="job-entry">
+                <div class="job-company">
+                    <span class="job-company-name">Universidad Tecnológica Metropolitana (UTEM)</span>
+                    <span class="job-location">Santiago de Chile</span>
+                </div>
+                <div class="job-dates">
+                    <span class="job-dates-range"><strong>Research Assistant and Mathematics Instructor</strong></span>
+                    <span><strong>Dec 2024–May 2026</strong></span>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li><strong>Managed</strong> multiple (4+) research projects under the 2023 Regular Research Programs call, <strong>coordinating</strong> the collection, organization, and analysis of technical and mathematical information for academic project development.</li>
+                        <li><strong>Researched</strong> actively in the mathematical modeling of epidemiological systems, <strong>developing</strong> SIR models and <strong>applying</strong> dynamic simulations to study disease spread and evaluate control scenarios.</li>
+                        <li><strong>Designed and implemented</strong> teaching support strategies in the Department of Mathematics, <strong>delivering</strong> courses in <strong>Differential and Integral Calculus</strong>.</li>
+                        <li><strong>Taught</strong> 2026 leveling courses to over 140 students, <strong>contributing</strong> to the initial academic preparation of university students.</li>
+                        <li><strong>Prepared</strong> technical reports and methodological documentation, <strong>ensuring</strong> data traceability and the reproducibility of results obtained in research projects.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="job-entry" style="margin-top: 8px;">
+                <div class="job-company">
+                    <span class="job-company-name">NOVATRONIKS Research Incubator – Mechatronic Systems Research Group</span>
+                    <span class="job-location">Neiva, Colombia</span>
+                </div>
+                <div class="job-dates">
+                    <span class="job-dates-range"><strong>Incubator Researcher</strong></span>
+                    <span><strong>Feb 2018–Oct 2023</strong></span>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li><strong>Coordinated</strong> applied innovation initiatives in mechatronic engineering, <strong>leading</strong> the incubator's participation in internal and external calls for proposals.</li>
+                        <li><strong>Managed</strong> the development of the project <em>Mixed Rotating Sweeper for Maintenance and Cleaning of Gutters at Heights</em> (approved under Agreement 291 of 2022), <strong>supervising</strong> the mechanical design, technical analysis, and prototyping phases for a team of 5 engineers.</li>
+                        <li><strong>Collaborated</strong> actively with the Mechatronic Systems Research Group, <strong>integrating</strong> design and control knowledge to generate innovative solutions for high-altitude maintenance.</li>
+                        <li><strong>Prepared</strong> technical documentation and progress reports, <strong>ensuring</strong> compliance with milestones and deliverable quality.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="job-entry" style="margin-top: 8px;">
+                <div class="job-company">
+                    <span class="job-company-name">Robotics4.0 SAS</span>
+                    <span class="job-location">Neiva, Colombia</span>
+                </div>
+                <div class="job-dates">
+                    <span class="job-dates-range"><strong>Researcher and Project Coordinator</strong></span>
+                    <span><strong>Aug 2022–Jun 2023</strong></span>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li><strong>Managed</strong> the planning and execution of industry-oriented robotic projects, prototyping, and technological application, <strong>ensuring</strong> compliance with deadlines and objectives.</li>
+                        <li><strong>Designed and delivered</strong> training workshops on the Openbot V1 robot, <strong>coordinating</strong> the training of 80+ students and professionals, and improving applied robotics learning processes.</li>
+                        <li><strong>Integrated and supervised</strong> multidisciplinary teams, applying mechatronics, programming, and control knowledge to solve technical challenges in innovation projects.</li>
+                        <li><strong>Documented and standardized</strong> operational procedures, <strong>contributing</strong> to time and resource optimization in the R&D area.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="job-entry" style="margin-top: 8px;">
+                <div class="job-company">
+                    <span class="job-company-name">Universidad Surcolombiana</span>
+                    <span class="job-location">Neiva, Colombia</span>
+                </div>
+                <div class="job-dates">
+                    <span class="job-dates-range"><strong>Teaching Assistant and Researcher</strong></span>
+                    <span><strong>Jan 2022–Jun 2023</strong></span>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li><strong>Provided</strong> academic tutoring in mathematics for 60+ undergraduate students in the Public Accounting and Business Administration programs.</li>
+                        <li><strong>Researched</strong> actively in the TIMATH Incubator, <strong>modeling</strong> dynamic ecosystems using differential equations and <strong>presenting</strong> results at conferences.</li>
+                        <li><strong>Managed</strong> databases and <strong>collaborated</strong> in drafting technical reports and scientific articles.</li>
+                        <li><strong>Coordinated</strong> schedules and resources for tutoring sessions.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education -->
+        <section>
+            <h2>Education</h2>
+            
+            <div class="education-entry">
+                <div class="education-left">
+                    <div class="education-program">Master of Science in Engineering, Major in Mechanics</div>
+                    <div class="education-school">Universidad de Santiago de Chile</div>
+                </div>
+                <div class="education-right">
+                    <div class="education-dates">2025–Present</div>
+                    <div class="education-grade">In progress: Final semester</div>
+                </div>
+            </div>
+            
+            <div class="education-entry">
+                <div class="education-left">
+                    <div class="education-program">Master of Science in Biomathematics</div>
+                    <div class="education-school">UTEM</div>
+                </div>
+                <div class="education-right">
+                    <div class="education-dates">2024–2025</div>
+                    <div class="education-grade">Grade average: 92%</div>
+                </div>
+            </div>
+            
+            <div class="education-entry">
+                <div class="education-left">
+                    <div class="education-program">Bachelor of Engineering in Mechatronics</div>
+                    <div class="education-school">Corporación Universitaria del Huila</div>
+                </div>
+                <div class="education-right">
+                    <div class="education-dates">2018–2024</div>
+                    <div class="education-grade">Grade average: 81%</div>
+                </div>
+            </div>
+            
+            <div class="education-entry">
+                <div class="education-left">
+                    <div class="education-program">Bachelor of Science in Mathematics</div>
+                    <div class="education-school">Universidad Surcolombiana</div>
+                </div>
+                <div class="education-right">
+                    <div class="education-dates">2019–2023</div>
+                    <div class="education-grade">Grade average: 83%</div>
+                </div>
+            </div>
+            
+            <div class="education-entry">
+                <div class="education-left">
+                    <div class="education-program">Technician in Implementation and Maintenance of Industrial Electronic Equipment</div>
+                    <div class="education-school">SENA</div>
+                </div>
+                <div class="education-right">
+                    <div class="education-dates">2016–2017</div>
+                    <div class="education-grade"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects -->
+        <section>
+            <h2>Projects</h2>
+            
+            <div class="project-entry">
+                <div class="project-title">
+                    <span>Mathematical Modeling of an Electromotive System</span>
+                    <span>Jan 2022–Jun 2022</span>
+                </div>
+                <div class="project-category">
+                    <span><em>Automation and Control</em></span>
+                    <span><a href="https://github.com/Camilo9495/Modelado-matem-tico-de-un-sistema-electromotriz" target="_blank" style="color: #0066cc; text-decoration: none;">GitHub</a></span>
+                </div>
+                <div class="project-description">
+                    <ul>
+                        <li>Developed a mathematical model of an RL circuit with a DC motor as actuator using MATLAB.</li>
+                        <li>Implemented transfer functions, Z-transform, and PID controller to optimize system response.</li>
+                        <li>Applied automatic control fundamentals to achieve efficient and stable performance.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="project-entry">
+                <div class="project-title">
+                    <span>Development and Implementation of a Myoelectric Hand Prosthesis Prototype</span>
+                    <span>Aug 2022–Nov 2022</span>
+                </div>
+                <div class="project-category">
+                    <span><em>Biomechanics</em></span>
+                    <span><a href="https://github.com/Camilo9495/Desarrollo-e-implementaci-n-de-una-pr-tesis-de-mano-mioelectrica" target="_blank" style="color: #0066cc; text-decoration: none;">GitHub</a></span>
+                </div>
+                <div class="project-description">
+                    <ul>
+                        <li>Designed and developed an anthropomorphic hand prosthesis based on myoelectric muscle signals.</li>
+                        <li>Integrated biomechanics, electronics, and mechanical design to build a functional prototype.</li>
+                        <li>Achieved 4 degrees of freedom (DoF) and signal acquisition accuracy exceeding 85% in muscle reading tests.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technical Skills -->
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-line">
+                <span class="skills-category">Programming Languages:</span>
+                <span class="skills-content">C++, Python, Arduino.</span>
+            </div>
+            <div class="skills-line">
+                <span class="skills-category">Development and Analysis Tools:</span>
+                <span class="skills-content">MATLAB/Simulink, Visual Studio, Jupyter, Spyder, Anaconda.</span>
+            </div>
+            <div class="skills-line">
+                <span class="skills-category">Engineering Software:</span>
+                <span class="skills-content">SolidWorks (CSWP/CSWA certified), Mechanical Design, Sheet Metal, Simulation, Visualize, PCB Design, TIA Portal, LabVIEW.</span>
+            </div>
+            <div class="skills-line">
+                <span class="skills-category">Data Science and Machine Learning:</span>
+                <span class="skills-content">TensorFlow, Pandas, NumPy, Matplotlib, Keras, Scikit-learn.</span>
+            </div>
+        </section>
+        
+        <!-- Certifications -->
+        <section>
+            <h2>Certifications</h2>
+            <ul class="certification-list">
+                <li><a href="https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-RZTGVXPJKA" target="_blank"><strong>SolidWorks Associate – Mechanical Design (CSWA)</strong></a> — Dassault Systèmes.</li>
+                <li><a href="https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-CSMAYRVG7W" target="_blank"><strong>SolidWorks Professional – Mechanical Design (CSWP)</strong></a> — Dassault Systèmes.</li>
+                <li><a href="https://www.coursera.org/account/accomplishments/verify/XVWW97WH7H84" target="_blank"><strong>Programming for Everybody (Getting Started with Python)</strong></a> — University of Michigan, Coursera.</li>
+                <li><a href="https://capacitateparaelempleo.org/verifica/cdcaf544-0501-48ea-8e58-e89d82d2ac87/083f7291-a188-43ad-a407-7fb5842adfdc" target="_blank"><strong>Printed Circuit Board (PCB) Designer</strong></a> — Fundación Carlos Slim.</li>
+                <li><a href="https://www.coursera.org/account/accomplishments/verify/KH8CW79WDNDZ" target="_blank"><strong>Rapid Development of Innovative Products for Emerging Markets</strong></a> — Tecnológico de Monterrey, Coursera.</li>
+                <li><a href="https://certificados.sena.edu.co/CertificadoDigital/com.sena.guardar?var1=9527002528034CC1075321787E" target="_blank"><strong>PLC Integration in Industrial Systems Control</strong></a> — SENA.</li>
+                <li><a href="https://drive.google.com/file/d/1DabIwVfecX1WSiy8wcNlsFop3JDFaTMQ/view?usp=sharing" target="_blank"><strong>Mobile App Development</strong></a> — Google.</li>
+            </ul>
+        </section>
+        
+        <!-- Publications and Intellectual Property -->
+        <section>
+            <h2>Publications and Intellectual Property</h2>
+            
+            <div class="publication-entry">
+                <span class="publication-label">Article:</span>
+                Camilo Andrés Rodríguez Cifuentes and MSc. Francisco Javier Reyes Bahamón. <span class="publication-title">Analysis of a modified Leslie-Gower predator-prey model with Holling type II functional response and predator cooperation</span>.
+            </div>
+            
+            <div class="publication-entry">
+                <span class="publication-label">Patent:</span>
+                E. Cortés, S. Dussán, J. Rodríguez Pradilla, C. Rodríguez Cifuentes and G. Arias Vargas. <span class="publication-title">Mixed Rotating Sweeper for Maintenance and Cleaning of Channels at Height</span>.
+                <a href="https://drive.google.com/file/d/1YXTOqp26MAlAAs_p8_AznWRzH4eaOCFr/view?usp=sharing" target="_blank" class="publication-link">DNDA</a>
+            </div>
+        </section>
+        
+        <!-- Languages -->
+        <section>
+            <h2>Languages</h2>
+            <div class="language-line">
+                <span class="language-name">Spanish:</span>
+                <span class="language-level">Native.</span>
+            </div>
+            <div class="language-line">
+                <span class="language-name">English:</span>
+                <span class="language-level">B2 (Upper-Intermediate), Level 9/11 certified by USCO/Corhuila Language Institute and EF SET.</span>
+                <a href="https://drive.google.com/file/d/13CqIcplmNAKSrwgkTkiOLKDHzstPMkpR/view?usp=drive_link" target="_blank" class="language-cert">Certification</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
